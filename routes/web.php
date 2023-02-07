@@ -40,9 +40,6 @@ Route::get('/contact', function () {
     return Inertia::render('Contact');
 })->name('contact');
 
-Route::get('/:pathMatch(.*)*', function () {
-    return Inertia::render('Error');
-})->name(':pathMatch(.*)*');
 
 
 
