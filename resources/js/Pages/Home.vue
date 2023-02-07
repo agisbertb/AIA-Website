@@ -10,15 +10,15 @@ defineProps({
 </script>
 
 <template>
-    <Head title="Welcome" />
+    <Head title="AIA-AUDIT" />
     <div class="bg-white">
     <header>
         <div class="relative bg-white">
         <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
             <div class="flex justify-start lg:w-0 lg:flex-1">
             <a href="#">
-                <span class="sr-only">Your Company</span>
-                <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?from-color=purple&from-shade=600&to-color=indigo&to-shade=600&toShade=600" alt="">
+                <span class="sr-only">AIA AUDIT</span>
+                <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?from-color=blue&from-shade=600&to-color=indigo&to-shade=600&toShade=600" alt="">
             </a>
             </div>
             <div class="-my-2 -mr-2 md:hidden">
@@ -29,43 +29,19 @@ defineProps({
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                 </svg>
             </button>
-            </div>
-            <nav class="hidden space-x-10 md:flex">
-            <div class="relative">
-                <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-                <button type="button" class="text-gray-500 group inline-flex items-center rounded-md bg-white text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-expanded="false">
-                <span>Solutions</span>
-                <!--
-                    Heroicon name: mini/chevron-down
-
-                    Item active: "text-gray-600", Item inactive: "text-gray-400"
-                -->
-                <svg class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-                </svg>
-                </button>
-
-                <!--
-                'Solutions' flyout menu, show/hide based on flyout menu state.
-
-                Entering: "transition ease-out duration-200"
-                    From: "opacity-0 translate-y-1"
-                    To: "opacity-100 translate-y-0"
-                Leaving: "transition ease-in duration-150"
-                    From: "opacity-100 translate-y-0"
-                    To: "opacity-0 translate-y-1"
-                -->
-
-            </div>
-
-            <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Pricing</a>
-            <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Partners</a>
-            <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">Company</a>
-            </nav>
-            <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-            <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">Sign in</a>
-            <a href="#" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Sign up</a>
-            </div>
+        </div>
+        <nav class="hidden space-x-10 md:flex">
+        <Link :href="route('home')" class="text-base font-bold text-gray-500 hover:text-blue-900">Inici</Link>
+        <Link :href="route('services')" class="text-base font-bold text-gray-500 hover:text-blue-900">Serveis</Link>
+        <Link :href="route('team')" class="text-base font-bold text-gray-500 hover:text-blue-900">Equip</Link>
+        <Link :href="route('about')" class="text-base font-bold text-gray-500 hover:text-blue-900">Sobre</Link>
+        <Link :href="route('prices')" class="text-base font-bold text-gray-500 hover:text-blue-900">Preus</Link>
+        <Link :href="route('contact')" class="text-base font-bold text-gray-500 hover:text-blue-900">Contacte</Link>
+        </nav>
+        <div class="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+        <a href="#" class="whitespace-nowrap text-base font-bold text-gray-500 hover:text-blue-900">Accedeix</a>
+        <a href="/register" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-bold text-white shadow-sm hover:from-blue-700 hover:to-indigo-700">Registra't</a>
+        </div>
         </div>
 
         <!--
@@ -83,7 +59,7 @@ defineProps({
             <div class="px-5 pt-5 pb-6">
                 <div class="flex items-center justify-between">
                 <div>
-                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?from-color=purple&from-shade=600&to-color=indigo&to-shade=600&toShade=600" alt="Your Company">
+                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?from-color=blue&from-shade=600&to-color=indigo&to-shade=600&toShade=600" alt="Your Company">
                 </div>
                 <div class="-mr-2">
                     <button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -98,7 +74,7 @@ defineProps({
                 <div class="mt-6">
                 <nav class="grid grid-cols-1 gap-7">
                     <a href="#" class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
-                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
                         <!-- Heroicon name: outline/inbox -->
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z" />
@@ -108,7 +84,7 @@ defineProps({
                     </a>
 
                     <a href="#" class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
-                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
                         <!-- Heroicon name: outline/chat-bubble-bottom-center-text -->
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
@@ -118,7 +94,7 @@ defineProps({
                     </a>
 
                     <a href="#" class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
-                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
                         <!-- Heroicon name: outline/chat-bubble-left-right -->
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" />
@@ -128,7 +104,7 @@ defineProps({
                     </a>
 
                     <a href="#" class="-m-3 flex items-center rounded-lg p-3 hover:bg-gray-50">
-                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                    <div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
                         <!-- Heroicon name: outline/question-mark-circle -->
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
@@ -146,7 +122,7 @@ defineProps({
                 <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">Company</a>
                 </div>
                 <div class="mt-6">
-                <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Sign up</a>
+                <a href="#" class="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-indigo-700">Sign up</a>
                 <p class="mt-6 text-center text-base font-medium text-gray-500">
                     Existing customer?
                     <a href="#" class="text-gray-900">Sign in</a>
@@ -165,19 +141,19 @@ defineProps({
         <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div class="relative shadow-xl sm:overflow-hidden sm:rounded-2xl">
             <div class="absolute inset-0">
-                <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100" alt="People working on laptops">
-                <div class="absolute inset-0 bg-gradient-to-r from-purple-800 to-indigo-700 mix-blend-multiply"></div>
+                <img class="h-full w-full object-cover" src="https://www.redteamsecure.com/resourcefiles/home-hero-slider-image/penetration-testing-overview.jpg" alt="People working on laptops">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-800 to-indigo-700 mix-blend-multiply"></div>
             </div>
             <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 class="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                <span class="block text-white">Take control of your</span>
-                <span class="block text-indigo-200">customer support</span>
+                <span class="block text-white">AIA AUDIT</span>
+                <span class="block text-indigo-200 text-2xl">Red Team company</span>
                 </h1>
-                <p class="mx-auto mt-6 max-w-lg text-center text-xl text-indigo-200 sm:max-w-3xl">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+                <p class="mx-auto mt-6 max-w-lg text-center text-xl text-indigo-200 sm:max-w-3xl">Elaborem plans complets de ciberseguretat i oferim una gestió contínua per mantenir protegida la vostra empresa</p>
                 <div class="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                 <div class="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-                    <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-indigo-700 shadow-sm hover:bg-indigo-50 sm:px-8">Get started</a>
-                    <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8">Live demo</a>
+                    <a href="/register" class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-indigo-700 shadow-sm hover:bg-indigo-50 sm:px-8">Registra't</a>
+                    <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8">Accedeix</a>
                 </div>
                 </div>
             </div>
@@ -188,22 +164,24 @@ defineProps({
         <!-- Logo Cloud -->
         <div class="bg-gray-100">
         <div class="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-base font-semibold text-gray-500">Trusted by over 5 very average small businesses</p>
+            <p class="text-center text-base font-semibold text-gray-500">Algunes de les empreses que confien en nosaltres</p>
+            <br>
             <div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
+                <img class="h-12" src="https://upload.wikimedia.org/wikipedia/commons/9/96/Microsoft_logo_%282012%29.svg" alt="Tuple">
             </div>
             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage">
+                <img class="h-12" src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="Mirage">
             </div>
             <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                <img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
+                <img class="h-12" src="https://upload.wikimedia.org/wikipedia/commons/5/50/Oracle_logo.svg" alt="StaticKit">
             </div>
             <div class="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                <img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Transistor">
+                <img class="h-12" src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Transistor">
             </div>
             <div class="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                <img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation">
+                <img class="h-12" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="Workcation">
+                
             </div>
             </div>
         </div>
@@ -217,32 +195,32 @@ defineProps({
             <div class="mx-auto max-w-xl px-4 sm:px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
                 <div>
                 <div>
-                    <span class="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-indigo-600">
                     <!-- Heroicon name: outline/inbox -->
                     <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                     </svg>
                     </span>
                 </div>
                 <div class="mt-6">
-                    <h2 class="text-3xl font-bold tracking-tight text-gray-900">Stay on top of customer support</h2>
-                    <p class="mt-4 text-lg text-gray-500">Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.</p>
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900">Excel·lència en el servei</h2>
+                    <p class="mt-4 text-lg text-gray-500">Brindem un servei excepcional i d'alta qualitat als clients. Responem de manera ràpida i efectiva a les necessitats del client, oferim solucions personalitzades i resolem els problemes de manera eficient. El nostre objectiu és crear una experiència positiva per al client i establir una relació de confiança i lleialtat.</p>
                     <div class="mt-6">
-                    <a href="#" class="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Get started</a>
+                    <a href="/register" class="inline-flex rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-indigo-700">Registra't</a>
                     </div>
                 </div>
                 </div>
-                <div class="mt-8 border-t border-gray-200 pt-6">
+                <div class="mt-8 border-t border-white pt-6">
                 <blockquote>
                     <div>
-                    <p class="text-base text-gray-500">&ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;</p>
+                    <p class="text-base text-white">&ldquo;&rdquo;</p>
                     </div>
                     <footer class="mt-3">
                     <div class="flex items-center space-x-3">
                         <div class="flex-shrink-0">
-                        <img class="h-6 w-6 rounded-full" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                        
                         </div>
-                        <div class="text-base font-medium text-gray-700">Marcia Hill, Digital Marketing Manager</div>
+
                     </div>
                     </footer>
                 </blockquote>
@@ -251,7 +229,15 @@ defineProps({
             <div class="mt-12 sm:mt-16 lg:mt-0">
                 <div class="-mr-48 pl-4 sm:pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
                 <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg" alt="Inbox user interface">
-                </div>
+                <video
+                autoplay
+                loop
+                muted
+                class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none">
+                <source src="https://assets.website-files.com/629fd7fea86dd7891a8e1d0b/62deecccdf68cec9fd0c9c6e_ecellence%20in%20serve-fade-transcode.mp4" type="video/mp4"/>
+            </video>    
+            
+            </div>
             </div>
             </div>
         </div>
@@ -260,25 +246,31 @@ defineProps({
             <div class="mx-auto max-w-xl px-4 sm:px-6 lg:col-start-2 lg:mx-0 lg:max-w-none lg:py-32 lg:px-0">
                 <div>
                 <div>
-                    <span class="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-purple-600 to-indigo-600">
+                    <span class="flex h-12 w-12 items-center justify-center rounded-md bg-gradient-to-r from-blue-600 to-indigo-600">
                     <!-- Heroicon name: outline/sparkles -->
                     <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M8.25 19.5V21M12 3v1.5m0 15V21m3.75-18v1.5m0 15V21m-9-1.5h10.5a2.25 2.25 0 002.25-2.25V6.75a2.25 2.25 0 00-2.25-2.25H6.75A2.25 2.25 0 004.5 6.75v10.5a2.25 2.25 0 002.25 2.25zm.75-12h9v9h-9v-9z" />
                     </svg>
                     </span>
                 </div>
                 <div class="mt-6">
-                    <h2 class="text-3xl font-bold tracking-tight text-gray-900">Better understand your customers</h2>
-                    <p class="mt-4 text-lg text-gray-500">Semper curabitur ullamcorper posuere nunc sed. Ornare iaculis bibendum malesuada faucibus lacinia porttitor. Pulvinar laoreet sagittis viverra duis. In venenatis sem arcu pretium pharetra at. Lectus viverra dui tellus ornare pharetra.</p>
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900">Tecnologia d'avantguarda</h2>
+                    <p class="mt-4 text-lg text-gray-500">Us recomanem solucions que s'adaptin a les vostres necessitats i entorns únics. El nostre equip selecciona i implementa les millors solucions per als nostres clients.</p>
                     <div class="mt-6">
-                    <a href="#" class="inline-flex rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Get started</a>
+                    <a href="/register" class="inline-flex rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-origin-border px-4 py-2 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-indigo-700">Registra't</a>
                     </div>
                 </div>
                 </div>
             </div>
             <div class="mt-12 sm:mt-16 lg:col-start-1 lg:mt-0">
                 <div class="-ml-48 pr-4 sm:pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
-                <img class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg" alt="Customer profile user interface">
+                    <video
+                        autoplay
+                        loop
+                        muted
+                        class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none">
+                        <source src="https://assets.website-files.com/629fd7fea86dd7891a8e1d0b/62deed304ff877b2beb96779_technology-agnostic-fade-transcode.mp4" type="video/mp4"/>
+                    </video>
                 </div>
             </div>
             </div>
@@ -286,128 +278,125 @@ defineProps({
         </div>
 
         <!-- Gradient Feature Section -->
-        <div class="bg-gradient-to-r from-purple-800 to-indigo-700">
+        <div class="bg-gradient-to-r from-blue-800 to-indigo-700">
         <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6 sm:pt-20 sm:pb-24 lg:max-w-7xl lg:px-8 lg:pt-24">
-            <h2 class="text-3xl font-bold tracking-tight text-white">Inbox support built for efficiency</h2>
-            <p class="mt-4 max-w-3xl text-lg text-purple-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis. Blandit aliquam sit nisl euismod mattis in.</p>
+            <h2 class="text-3xl font-bold tracking-tight text-white">Tot el que necessites per a la teva empresa</h2>
+            <p class="mt-4 max-w-3xl text-lg text-blue-200">Algunes de les nostres característiques més importants.</p>
             <div class="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-16">
-            <div>
-                <div>
-                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
-                    <!-- Heroicon name: outline/inbox -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 13.5h3.86a2.25 2.25 0 012.012 1.244l.256.512a2.25 2.25 0 002.013 1.244h3.218a2.25 2.25 0 002.013-1.244l.256-.512a2.25 2.25 0 012.013-1.244h3.859m-19.5.338V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18v-4.162c0-.224-.034-.447-.1-.661L19.24 5.338a2.25 2.25 0 00-2.15-1.588H6.911a2.25 2.25 0 00-2.15 1.588L2.35 13.177a2.25 2.25 0 00-.1.661z" />
-                    </svg>
-                </span>
-                </div>
-                <div class="mt-6">
-                <h3 class="text-lg font-medium text-white">Unlimited Inboxes</h3>
-                <p class="mt-2 text-base text-purple-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
-                    <!-- Heroicon name: outline/users -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-                    </svg>
-                </span>
-                </div>
-                <div class="mt-6">
-                <h3 class="text-lg font-medium text-white">Manage Team Members</h3>
-                <p class="mt-2 text-base text-purple-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
-                </div>
-            </div>
-
+            
             <div>
                 <div>
                 <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
                     <!-- Heroicon name: outline/trash -->
                     <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5" />
                     </svg>
                 </span>
                 </div>
                 <div class="mt-6">
-                <h3 class="text-lg font-medium text-white">Spam Report</h3>
-                <p class="mt-2 text-base text-purple-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                <h3 class="text-lg font-medium text-white">Alertes</h3>
+                <p class="mt-2 text-base text-blue-200">T'avisem en tot moment de noves vulnerabilitats que es reporten al mercat.</p>
                 </div>
             </div>
-
-            <div>
-                <div>
-                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
-                    <!-- Heroicon name: outline/pencil-square -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                    </svg>
-                </span>
-                </div>
-                <div class="mt-6">
-                <h3 class="text-lg font-medium text-white">Compose in Markdown</h3>
-                <p class="mt-2 text-base text-purple-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
-                </div>
-            </div>
-
-            <div>
-                <div>
-                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
-                    <!-- Heroicon name: outline/document-chart-bar -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                    </svg>
-                </span>
-                </div>
-                <div class="mt-6">
-                <h3 class="text-lg font-medium text-white">Team Reporting</h3>
-                <p class="mt-2 text-base text-purple-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
-                </div>
-            </div>
-
             <div>
                 <div>
                 <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
                     <!-- Heroicon name: outline/arrow-uturn-left -->
                     <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                </span>
+                </div>
+                <div class="mt-6">
+                <h3 class="text-lg font-medium text-white">Configuració</h3>
+                <p class="mt-2 text-base text-blue-200">Ens adaptem a tu amb una configuració completament personalitzada.</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
+                    <!-- Heroicon name: outline/users -->
+                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" />
                     </svg>
                 </span>
                 </div>
                 <div class="mt-6">
-                <h3 class="text-lg font-medium text-white">Saved Replies</h3>
-                <p class="mt-2 text-base text-purple-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                <h3 class="text-lg font-medium text-white">Software</h3>
+                <p class="mt-2 text-base text-blue-200">Utilitzem les nostres pròpies eines per solucionar qualsevol problema de seguretat.</p>
                 </div>
             </div>
-
+            <div>
+                <div>
+                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
+                    <!-- Heroicon name: outline/pencil-square -->
+                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 12.75c1.148 0 2.278.08 3.383.237 1.037.146 1.866.966 1.866 2.013 0 3.728-2.35 6.75-5.25 6.75S6.75 18.728 6.75 15c0-1.046.83-1.867 1.866-2.013A24.204 24.204 0 0112 12.75zm0 0c2.883 0 5.647.508 8.207 1.44a23.91 23.91 0 01-1.152 6.06M12 12.75c-2.883 0-5.647.508-8.208 1.44.125 2.104.52 4.136 1.153 6.06M12 12.75a2.25 2.25 0 002.248-2.354M12 12.75a2.25 2.25 0 01-2.248-2.354M12 8.25c.995 0 1.971-.08 2.922-.236.403-.066.74-.358.795-.762a3.778 3.778 0 00-.399-2.25M12 8.25c-.995 0-1.97-.08-2.922-.236-.402-.066-.74-.358-.795-.762a3.734 3.734 0 01.4-2.253M12 8.25a2.25 2.25 0 00-2.248 2.146M12 8.25a2.25 2.25 0 012.248 2.146M8.683 5a6.032 6.032 0 01-1.155-1.002c.07-.63.27-1.222.574-1.747m.581 2.749A3.75 3.75 0 0115.318 5m0 0c.427-.283.815-.62 1.155-.999a4.471 4.471 0 00-.575-1.752M4.921 6a24.048 24.048 0 00-.392 3.314c1.668.546 3.416.914 5.223 1.082M19.08 6c.205 1.08.337 2.187.392 3.314a23.882 23.882 0 01-5.223 1.082" />
+                    </svg>
+                </span>
+                </div>
+                <div class="mt-6">
+                <h3 class="text-lg font-medium text-white">Vulnerabilitats</h3>
+                <p class="mt-2 text-base text-blue-200">Solucionem totes les vulnerabilitats que pugueu tenir amb les vostres aplicacions.</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
+                    <!-- Heroicon name: outline/document-chart-bar -->
+                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                    </svg>
+                </span>
+                </div>
+                <div class="mt-6">
+                <h3 class="text-lg font-medium text-white">Actualitzacions</h3>
+                <p class="mt-2 text-base text-blue-200">Mantinguis a l'última amb les últimes actualitzacions de seguretat.</p>
+                </div>
+            </div>
             <div>
                 <div>
                 <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
                     <!-- Heroicon name: outline/chat-bubble-left-ellipsis -->
                     <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z" />
                     </svg>
                 </span>
                 </div>
                 <div class="mt-6">
-                <h3 class="text-lg font-medium text-white">Email Commenting</h3>
-                <p class="mt-2 text-base text-purple-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                <h3 class="text-lg font-medium text-white">Cloud</h3>
+                <p class="mt-2 text-base text-blue-200">Disposem d'un servei cloud totalment protegit.</p>
                 </div>
             </div>
-
+            <div>
+                <div>
+                <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
+                    <!-- Heroicon name: outline/inbox -->
+                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                    </svg>
+                </span>
+                </div>
+                <div class="mt-6">
+                <h3 class="text-lg font-medium text-white">Seguretat</h3>
+                <p class="mt-2 text-base text-blue-200">Mantinguis completament segur amb els nostres serveis.</p>
+                </div>
+            </div>
+    
             <div>
                 <div>
                 <span class="flex h-12 w-12 items-center justify-center rounded-md bg-white bg-opacity-10">
                     <!-- Heroicon name: outline/heart -->
-                    <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                    </svg>
+                    <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                      </svg>
+                      
                 </span>
                 </div>
                 <div class="mt-6">
-                <h3 class="text-lg font-medium text-white">Connect with Customers</h3>
-                <p class="mt-2 text-base text-purple-200">Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</p>
+                <h3 class="text-lg font-medium text-white">Valoració</h3>
+                <p class="mt-2 text-base text-blue-200">Valorem la teva seguretat com cap empresa ho farà.</p>
                 </div>
             </div>
             </div>
@@ -427,29 +416,29 @@ defineProps({
         <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-flow-col-dense xl:grid-cols-2 xl:gap-x-8">
             <div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
             <h2 class="text-base font-semibold">
-                <span class="bg-gradient-to-r from-purple-300 to-indigo-300 bg-clip-text text-transparent">Valuable Metrics</span>
+                <span class="bg-gradient-to-r from-blue-300 to-indigo-300 bg-clip-text text-transparent">Estadístiques</span>
             </h2>
-            <p class="mt-3 text-3xl font-bold tracking-tight text-white">Get actionable data that will help grow your business</p>
-            <p class="mt-5 text-lg text-gray-300">Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing quis in viverra tristique sem. Ornare feugiat viverra eleifend fusce orci in quis amet. Sit in et vitae tortor, massa. Dapibus laoreet amet lacus nibh integer quis. Eu vulputate diam sit tellus quis at.</p>
+            <p class="mt-3 text-3xl font-bold tracking-tight text-white">Amb els nostres serveis tindràs una seguretat com mai havies tingut</p>
+            <p class="mt-5 text-lg text-gray-300">Oferim solucions de seguretat i un servei automatitzat perquè els nostres clients estiguin segurs en qualsevol situació.</p>
             <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
                 <p>
-                <span class="block text-2xl font-bold text-white">8K+</span>
-                <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Companies</span> use laoreet amet lacus nibh integer quis.</span>
+                <span class="block text-2xl font-bold text-white">300+</span>
+                <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Projectes</span> completats.</span>
                 </p>
 
                 <p>
-                <span class="block text-2xl font-bold text-white">25K+</span>
-                <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Countries around the globe</span> lacus nibh integer quis.</span>
+                <span class="block text-2xl font-bold text-white">200+</span>
+                <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Clients</span> satisfets.</span>
                 </p>
 
                 <p>
-                <span class="block text-2xl font-bold text-white">98%</span>
-                <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Customer satisfaction</span> laoreet amet lacus nibh integer quis.</span>
+                <span class="block text-2xl font-bold text-white">10+</span>
+                <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Anys</span> d'experiència en aquest sector.</span>
                 </p>
 
                 <p>
-                <span class="block text-2xl font-bold text-white">12M+</span>
-                <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Issues resolved</span> lacus nibh integer quis.</span>
+                <span class="block text-2xl font-bold text-white">7+</span>
+                <span class="mt-1 block text-base text-gray-300"><span class="font-medium text-white">Països</span> amb els nostres serveis.</span>
                 </p>
             </div>
             </div>
@@ -460,12 +449,12 @@ defineProps({
         <div class="bg-white">
         <div class="mx-auto max-w-4xl py-16 px-4 sm:px-6 sm:py-24 lg:flex lg:max-w-7xl lg:items-center lg:justify-between lg:px-8">
             <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            <span class="block">Ready to get started?</span>
-            <span class="-mb-1 block bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text pb-1 text-transparent">Get in touch or create an account.</span>
+            <span class="block">Preparat per començar?</span>
+            <span class="-mb-1 block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text pb-1 text-transparent">Posa't en contacte o crea't un compte.</span>
             </h2>
             <div class="mt-6 space-y-4 sm:flex sm:space-y-0 sm:space-x-5">
-            <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Learn more</a>
-            <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-50 px-4 py-3 text-base font-medium text-indigo-800 shadow-sm hover:bg-indigo-100">Get started</a>
+            <a href="/register" class="flex items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-indigo-700">Registra't</a>
+            <a href="#" class="flex items-center justify-center rounded-md border border-transparent bg-indigo-50 px-4 py-3 text-base font-medium text-indigo-800 shadow-sm hover:bg-indigo-100">Accedeix</a>
             </div>
         </div>
         </div>
@@ -478,18 +467,18 @@ defineProps({
             <div class="grid grid-cols-2 gap-8 xl:col-span-2">
             <div class="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                <h3 class="text-base font-medium text-gray-900">Solutions</h3>
+                <h3 class="text-base font-medium text-gray-900">Solucions</h3>
                 <ul role="list" class="mt-4 space-y-4">
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Marketing</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Màrqueting</a>
                     </li>
 
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Analytics</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Analítica</a>
                     </li>
 
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Commerce</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Comerç</a>
                     </li>
 
                     <li>
@@ -498,32 +487,32 @@ defineProps({
                 </ul>
                 </div>
                 <div class="mt-12 md:mt-0">
-                <h3 class="text-base font-medium text-gray-900">Support</h3>
+                <h3 class="text-base font-medium text-gray-900">Suport</h3>
                 <ul role="list" class="mt-4 space-y-4">
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Pricing</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Preus</a>
                     </li>
 
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Documentation</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Documentació</a>
                     </li>
 
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Guides</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Guies</a>
                     </li>
 
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">API Status</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Estat de l'API</a>
                     </li>
                 </ul>
                 </div>
             </div>
             <div class="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                <h3 class="text-base font-medium text-gray-900">Company</h3>
+                <h3 class="text-base font-medium text-gray-900">Empresa</h3>
                 <ul role="list" class="mt-4 space-y-4">
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">About</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Sobre</a>
                     </li>
 
                     <li>
@@ -531,15 +520,15 @@ defineProps({
                     </li>
 
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Jobs</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Treballs</a>
                     </li>
 
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Press</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Premsa</a>
                     </li>
 
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Partners</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Socis</a>
                     </li>
                 </ul>
                 </div>
@@ -547,28 +536,28 @@ defineProps({
                 <h3 class="text-base font-medium text-gray-900">Legal</h3>
                 <ul role="list" class="mt-4 space-y-4">
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Claim</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Reclamació</a>
                     </li>
 
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Privacy</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Privacitat</a>
                     </li>
 
                     <li>
-                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Terms</a>
+                    <a href="#" class="text-base text-gray-500 hover:text-gray-900">Termes</a>
                     </li>
                 </ul>
                 </div>
             </div>
             </div>
             <div class="mt-12 xl:mt-0">
-            <h3 class="text-base font-medium text-gray-900">Subscribe to our newsletter</h3>
-            <p class="mt-4 text-base text-gray-500">The latest news, articles, and resources, sent to your inbox weekly.</p>
+            <h3 class="text-base font-medium text-gray-900">Subscriu-te al nostre butlletí</h3>
+            <p class="mt-4 text-base text-gray-500">Les últimes notícies, articles i recursos s'enviaran setmanalment a la vostra safata d'entrada.</p>
             <form class="mt-4 sm:flex sm:max-w-md">
-                <label for="email-address" class="sr-only">Email address</label>
-                <input type="email" name="email-address" id="email-address" autocomplete="email" required class="w-full min-w-0 appearance-none rounded-md border border-gray-300 bg-white py-2 px-4 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-indigo-500" placeholder="Enter your email">
+                <label for="email-address" class="sr-only">Correu electrònic</label>
+                <input type="email" name="email-address" id="email-address" autocomplete="email" required class="w-full min-w-0 appearance-none rounded-md border border-gray-300 bg-white py-2 px-4 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-indigo-500" placeholder="Introdueix el correu electrònic">
                 <div class="mt-3 rounded-md sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <button type="submit" class="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-purple-600 to-indigo-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-purple-700 hover:to-indigo-700">Subscribe</button>
+                <button type="submit" class="flex w-full items-center justify-center rounded-md border border-transparent bg-gradient-to-r from-blue-600 to-indigo-600 bg-origin-border px-4 py-3 text-base font-medium text-white shadow-sm hover:from-blue-700 hover:to-indigo-700">Subscriu-te</button>
                 </div>
             </form>
             </div>
@@ -596,7 +585,7 @@ defineProps({
                 </svg>
             </a>
 
-            <a href="#" class="text-gray-400 hover:text-gray-500">
+            <a href="https://github.com/AIA-Audit/" class="text-gray-400 hover:text-gray-500">
                 <span class="sr-only">GitHub</span>
                 <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
@@ -610,7 +599,7 @@ defineProps({
                 </svg>
             </a>
             </div>
-            <p class="mt-8 text-base text-gray-400 md:order-1 md:mt-0">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+            <p class="mt-8 text-base text-gray-400 md:order-1 md:mt-0">&copy; 2023 AIA Audit, Inc. Tots els drets reservats.</p>
         </div>
         </div>
     </footer>

@@ -15,14 +15,36 @@ use Inertia\Inertia;
 |
 */
 
+//Homepage
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
-    ]);
-});
+    return Inertia::render('Home');
+})->name('home');
+
+Route::get('/services', function () {
+    return Inertia::render('Services');
+})->name('services');
+
+Route::get('/about', function () {
+    return Inertia::render('About');
+})->name('about');
+
+Route::get('/prices', function () {
+    return Inertia::render('Prices');
+})->name('prices');
+
+Route::get('/team', function () {
+    return Inertia::render('Team');
+})->name('team');
+
+Route::get('/contact', function () {
+    return Inertia::render('Contact');
+})->name('contact');
+
+Route::get('/:pathMatch(.*)*', function () {
+    return Inertia::render('Error');
+})->name(':pathMatch(.*)*');
+
+
 
 Route::middleware([
     'auth:sanctum',
